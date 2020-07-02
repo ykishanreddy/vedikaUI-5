@@ -1,0 +1,182 @@
+<div class="card mb-3" style="max-width: 1920px;">
+    <div class="container">
+        <p>Progress</p>
+        <div class="progress" style="height: 10px;">
+            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <hr>
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <h4 class="text-center pt-5">Welcome</h4>
+                <li><a href="../location/">Location</a></li>
+                <li><a href="../details/">Details</a></li>
+                <li><a href="../photos/">Photos</a></li>
+                <li><a href="../security/">Security</a></li>
+                <li><a href="../payment/">Payment</a></li>
+                <li><a href="../publishlisting/">Publish listing</a></li>
+            </div>
+            <div class="col-md-8" style="width: 550px;">
+                <div class="data" style="height: auto;padding:20px ;width:800px ;" >
+                    <h3>Describe your property</h3>
+                    <hr>
+                    <h3>What amenities does your property have?</h3>
+                    <p>These are the top amenities search for in your area
+                        You'll be able add more later with the functionhall editor
+                    </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                            style="margin: 10px;">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Ac Hall
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                            style="margin: 10px;">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Non-Ac Hall
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                            style="margin: 10px;">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Indoor Hall
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                            style="margin: 10px;">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Outdoor Hall
+                        </label>
+                    </div>
+                    <hr>
+                    <h3>Give your functionhall a headline and description</h3>
+                    <p>Describe what makes your functionhall special to let users know your hall
+                        is the perfect place for their parties
+                    </p>
+                    <h3>Functionhall headline</h3>
+                    <p>An engaging headline can grab a user's attention as they browse search results.</p>
+                    <form [formGroup]="DetailsForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-10">
+                                <label for="Headline"></label>
+
+                                <input type="text" name="Headline" class="form-control" formControlName="Headline"
+                                    placeholder="Headline"
+                                    [ngClass]="{'is-invalid':DetailsForm.get('Headline').touched && DetailsForm.get('Headline').invalid}" />
+                                <div *ngIf="DetailsForm.get('Headline').touched && DetailsForm.get('Headline').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="DetailsForm.get('Headline').errors.required">Headline Name is
+                                        required</div>
+                                    <div *ngIf="DetailsForm.get('Headline').errors.Headline">Headline
+                                        must be a
+                                        valid Headline</div>
+                                </div>
+                            </div>
+                            <!-- <p style="margin-top: 10px;">10 characters required</p>
+                    <h3>Property description</h3>
+                    <p>Let user's know the story behind your hall by describing your functionhall plan,
+                        what's unique about it, and what their staymight be like.
+                    </p> -->
+                            <div class="form-group col-md-10">
+                                <textarea class="form-control" rows="8"
+                                    placeholder="Functionhall description"></textarea>
+                            </div>
+                            <!-- <p>200 characters required</p>  -->
+                            <!-- <div class="form-row"> -->
+                            <div class="form-group col-md-10">
+                                <label for="Functionhalltype"></label>
+
+                                <input type="text" name="Functionhalltype" class="form-control"
+                                    formControlName="Functionhalltype" placeholder="Functionhalltype"
+                                    [ngClass]="{'is-invalid':DetailsForm.get('Functionhalltype').touched && DetailsForm.get('Functionhalltype').invalid}" />
+                                <div *ngIf="DetailsForm.get('Functionhalltype').touched && DetailsForm.get('Functionhalltype').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="DetailsForm.get('Functionhalltype').errors.required">Functionhalltype
+                                        Name is
+                                        required</div>
+                                    <div *ngIf="DetailsForm.get('Functionhalltype').errors.Functionhalltype">
+                                        Functionhalltype
+                                        must be a
+                                        valid Functionhalltype</div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <!-- <div class="form-row"> -->
+                            <div class="form-group col-md-10">
+                                <label for="Foodtype"></label>
+
+                                <input type="text" name="Foodtype" class="form-control" formControlName="Foodtype"
+                                    placeholder="Foodtype"
+                                    [ngClass]="{'is-invalid':DetailsForm.get('Foodtype').touched && DetailsForm.get('Foodtype').invalid}" />
+                                <div *ngIf="DetailsForm.get('Foodtype').touched && DetailsForm.get('Foodtype').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="DetailsForm.get('Foodtype').errors.required">Foodtype Name is
+                                        required</div>
+                                    <div *ngIf="DetailsForm.get('Foodtype').errors.Foodtype">Foodtype
+                                        must be a
+                                        valid Foodtype</div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <!-- <div class="form-row"> -->
+                            <div class="form-group col-md-10">
+                                <label for="Maximumguests"></label>
+
+                                <input type="text" name="Maximumguests" class="form-control"
+                                    formControlName="Maximumguests" placeholder="Maximumguests"
+                                    [ngClass]="{'is-invalid':DetailsForm.get('Maximumguests').touched && DetailsForm.get('Maximumguests').invalid}" />
+                                <div *ngIf="DetailsForm.get('Maximumguests').touched && DetailsForm.get('Maximumguests').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="DetailsForm.get('Maximumguests').errors.required">Maximumguests Name is
+                                        required</div>
+                                    <div *ngIf="DetailsForm.get('Maximumguests').errors.Maximumguests">Maximumguests
+                                        must be a
+                                        valid Maximumguests</div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+
+                            <!-- <div class="form-row"> -->
+                            <div class="form-group col-md-10">
+                                <label for="Roomtype"></label>
+
+                                <input type="text" name="Roomtype" class="form-control" formControlName="Roomtype"
+                                    placeholder="Roomtype"
+                                    [ngClass]="{'is-invalid':DetailsForm.get('Roomtype').touched && DetailsForm.get('Roomtype').invalid}" />
+                                <div *ngIf="DetailsForm.get('Roomtype').touched && DetailsForm.get('Roomtype').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="DetailsForm.get('Roomtype').errors.required">Roomtype Name is
+                                        required</div>
+                                    <div *ngIf="DetailsForm.get('Roomtype').errors.Roomtype">Roomtype
+                                        must be a
+                                        valid Roomtype</div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+
+
+
+                        </div>
+                    </form>
+
+                    <!-- <form name="form" [formGroup]="form"> -->
+                    <!-- <div>
+                            <label for="Headline"></label>
+                            <input  class="form-control form-control-lg" type="text" placeholder="Headline" style="height: 50px;">
+                        </div> -->
+                    <!-- </form> -->
+                    <span><button type="button" class="btn btn-outline backbutton" (click)="back()">Back</button>
+                        <button type="button" style="margin-left: 190px; border-radius: 30px;" class="btn btn-primary "
+                            [disabled]="DetailsForm.invalid" (click)="onclick()">Next
+                        </button></span>
+    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->

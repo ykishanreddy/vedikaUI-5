@@ -1,0 +1,44 @@
+.card mb-3{
+    background-color: rgb(248, 249, 250);
+    height: 865px;
+    /* margin-top: 60px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.backbutton{
+    margin-left: 40px;
+    border-radius: 30px;
+}
+li{
+    font-size: 20px;
+    margin-left: 110px;
+    padding-bottom: 20px;
+}
+
+h4{
+    padding-bottom: 30px;
+}
+
+/* button{
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 380px; 
+   margin-right: 0px; 
+} */
+.invalid-feedback{
+    color: red;
+    /* border: 2px solid red; */
+}
+.card {
+    /* background-color: #ffffff; */
+    border: 3px solid rgba(0, 34, 51, 0.1);
+    box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05), 2px 4px 10px 0 rgba(0, 34, 51, 0.05);
+    border-radius: 0.15rem;
+}
+.data{
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 34, 51, 0.1);
+    box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05), 2px 4px 10px 0 rgba(0, 34, 51, 0.05);
+    border-radius: 0.15rem;
+}
+
