@@ -1,0 +1,243 @@
+<div class="card mb-3" style="max-width: 1920px;">
+    <div class="container">
+        <p>Progress</p>
+        <div class="progress" style="height: 10px;">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <hr>
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <h4 class="text-center pt-5">Welcome</h4>
+                <li><a href="../location/">Location</a></li>
+                <li><a href="../details/">Details</a></li>
+                <li><a href="../photos/">Photos</a></li>
+                <li><a href="../security/">Security</a></li>
+                <li><a href="../payment/">Payment</a></li>
+                <li><a href="../publishlisting/">Publish listing</a></li>
+            </div>
+            <div class="col-md-8" style="width: 700px;">
+                <div class="data" style="height: 886px;padding:20px ;width: 800px;">
+                    <h4>Getting Started</h4>
+                    <h4>Confirm your contact information</h4>
+                    <form name="InfoForm" [formGroup]="InfoForm" (ngSubmit)="onclick()">
+                        <div class="form-row pt-2">
+                            <div class="form-group col-md-5">
+                                <label for="inputFirstname">First Name</label>
+                                <input type="text" name="Firstname" class="form-control" formControlName="Firstname"
+                                    placeholder="First Name "
+                                    [ngClass]="{'is-invalid':InfoForm.get('Firstname').touched && InfoForm.get('Firstname').invalid}" />
+                                <div *ngIf="InfoForm.get('Firstname').touched && InfoForm.get('Firstname').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="InfoForm.get('Firstname').errors.required">First
+                                        Name is
+                                        required</div>
+                                    <div *ngIf="InfoForm.get('Firstname').errors.Firstname">
+                                        Firstname
+                                        must be a
+                                        valid Firstname</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="inputLastname">Last Name</label>
+                                <input type="text" name="Lastname" class="form-control" formControlName="Lastname"
+                                    placeholder="First Name "
+                                    [ngClass]="{'is-invalid':InfoForm.get('Lastname').touched && InfoForm.get('Lastname').invalid}" />
+                                <div *ngIf="InfoForm.get('Lastname').touched && InfoForm.get('Lastname').invalid"
+                                    class="invalid-feedback">
+                                    <div *ngIf="InfoForm.get('Lastname').errors.required">First
+                                        Name is
+                                        required</div>
+                                    <div *ngIf="InfoForm.get('Lastname').errors.Lastname">
+                                        Firstname
+                                        must be a
+                                        valid Firstname</div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback">
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputEmail4">Email</label>
+                            <input type="text" name="Email" class="form-control" formControlName="Email"
+                                placeholder="Email  "
+                                [ngClass]="{'is-invalid':InfoForm.get('Email').touched && InfoForm.get('Email').invalid}" />
+                            <div *ngIf="InfoForm.get('Email').touched && InfoForm.get('Email').invalid"
+                                class="invalid-feedback">
+                                <div *ngIf="InfoForm.get('Email').errors.required">First
+                                    Name is
+                                    required</div>
+                                <div *ngIf="InfoForm.get('Email').errors.Email">
+                                    Email
+                                    must be a
+                                    valid Email</div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group col-md-5">
+    <label for="inputPassword4">Password</label>
+    <input type="password" [(ngModel)]="UserData.password" name="password" class="form-control"
+        id="inputPassword4" placeholder="Password">
+</div> -->
+
+                        <div class="form-group col-md-5">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" name="Password" class="form-control" formControlName="Password"
+                                placeholder="Password  "
+                                [ngClass]="{'is-invalid':InfoForm.get('Password').touched && InfoForm.get('Password').invalid}" />
+                            <div *ngIf="InfoForm.get('Password').touched && InfoForm.get('Password').invalid"
+                                class="invalid-feedback">
+                                <div *ngIf="InfoForm.get('Password').errors.required">First
+                                    Name is
+                                    required</div>
+                                <div *ngIf="InfoForm.get('Password').errors.Password">
+                                    Password
+                                    must be a
+                                    valid Password</div>
+                            </div>
+                        </div>
+               
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <label for="inputFunctionhallname">Function Halls Name</label>
+                        <input type="text" name="Functionhallsname" class="form-control"
+                            formControlName="Functionhallsname" placeholder="Function Halls Name"
+                            [ngClass]="{'is-invalid':InfoForm.get('Functionhallsname').touched && InfoForm.get('Functionhallsname').invalid}" />
+                        <div *ngIf="InfoForm.get('Functionhallsname').touched && InfoForm.get('Functionhallsname').invalid"
+                            class="invalid-feedback">
+                            <div *ngIf="InfoForm.get('Functionhallsname').errors.required">First
+                                Name is
+                                required</div>
+                            <div *ngIf="InfoForm.get('Functionhallsname').errors.Functionhallsname">
+                                Functionhalls name
+                                must be a
+                                valid Functionhalls name</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" name="Address" class="form-control" formControlName="Address"
+                            placeholder="Address"
+                            [ngClass]="{'is-invalid':InfoForm.get('Address').touched && InfoForm.get('Address').invalid}" />
+                        <div *ngIf="InfoForm.get('Address').touched && InfoForm.get('Address').invalid"
+                            class="invalid-feedback">
+                            <div *ngIf="InfoForm.get('Address').errors.required">Address
+                                must be a
+                                valid Address</div>
+                            <div *ngIf="InfoForm.get('Address').errors.Address">
+                                Address
+                                must be a
+                                valid Address</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" name="Address_2" class="form-control" formControlName="Address_2"
+                            placeholder="Address 2"
+                            [ngClass]="{'is-invalid':InfoForm.get('Address_2').touched && InfoForm.get('Address_2').invalid}" />
+                        <div *ngIf="InfoForm.get('Address_2').touched && InfoForm.get('Address_2').invalid"
+                            class="invalid-feedback">
+                            <div *ngIf="InfoForm.get('Address_2').errors.required">Address 2
+                                must be a
+                                valid Address</div>
+                            <div *ngIf="InfoForm.get('Address_2').errors.Address_2">
+                                Address 2
+                                must be a
+                                valid Address 2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <label for="inputAddress2"> City</label>
+                        <input type="text" name="City" class="form-control" formControlName="City" placeholder="City  "
+                            [ngClass]="{'is-invalid':InfoForm.get('City').touched && InfoForm.get('City').invalid}" />
+                        <div *ngIf="InfoForm.get('City').touched && InfoForm.get('City').invalid"
+                            class="invalid-feedback">
+                            <div *ngIf="InfoForm.get('City').errors.required">City</div>
+                            <div *ngIf="InfoForm.get('City').errors.City">
+                                City
+                                must be a
+                                valid City </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-10">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control" formControlName="City">
+                        <option selected>Choose...</option>
+                        <option>Maharashtra</option>
+                        <option>Andaman and Nicobar Islands</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option> Bihar</option>
+                        <option>Chandigarh</option>
+                        <option>Chhattisgarh</option>
+                        <option>Dadra and Nagar Haveli</option>
+                        <option>Daman and Diu</option>
+                        <option>Delhi</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Lakshadweep</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Puducherry</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" name="Zip" class="form-control" formControlName="Zip" placeholder="Zip "
+                            [ngClass]="{'is-invalid':InfoForm.get('Zip').touched && InfoForm.get('Zip').invalid}" />
+                        <div *ngIf="InfoForm.get('Zip').touched && InfoForm.get('Zip').invalid"
+                            class="invalid-feedback">
+                            <div *ngIf="InfoForm.get('Zip').errors.required">Zip
+                                Code is
+                                required</div>
+                            <div *ngIf="InfoForm.get('Zip').errors.Zip">
+                                Zip Code
+                                must be a
+                                valid Zip</div>
+                        </div>
+                    </div>
+                </div>
+                <label class="form-check-label" for="gridCheck">
+                    Accept Terms & Conditions
+                </label>
+                </form>
+                <div class="col-md-10">
+                    <button type="button" class="btn btn-outline-primary" (click)="back()">Back</button>
+                    <button type="button" class="btn btn btn-primary float-right" [disabled]="InfoForm.invalid"
+                        (click)="onclick()">Next</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

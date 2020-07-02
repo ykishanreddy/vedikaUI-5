@@ -1,0 +1,28 @@
+.card{
+    background-color: rgb(248, 249, 250);
+    height: 1200px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    font-size: 20px;
+    margin-left: 110px;
+    padding-bottom: 20px;
+}
+
+h4{
+    padding-bottom: 30px;
+}
+
+button{
+  border-radius: 30px;
+  margin-right: 311PX;
+}
+.data{
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 34, 51, 0.1);
+    box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05), 2px 4px 10px 0 rgba(0, 34, 51, 0.05);
+    border-radius: 0.15rem;
+}
